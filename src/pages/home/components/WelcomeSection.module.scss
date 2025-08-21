@@ -1,0 +1,217 @@
+.hero_container {
+    display: flex;
+    gap: 20px;
+    padding: 50px 0px;
+
+    .hero_left {
+        flex: 1;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.49), rgba(0, 0, 0, 0.49)), url(../../../arquivos//fundo_welcome.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        max-width: 512px;
+        height: 558px;
+        border-radius: 20px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: space-between;
+
+        .hero_titleArea {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .hero_title {
+                font-weight: 700;
+                font-size: 76px;
+                line-height: 70px;
+                letter-spacing: 0%;
+                font-family: 'AlteHaasGroteskBold';
+                color: #BBBBBB;
+
+                span {
+                    color: #CBFB45;
+                    font-family: 'AlteHaasGroteskBold';
+                }
+            }
+
+            .hero_description {
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 19px;
+                letter-spacing: 0%;
+                color: #fff;
+            }
+        }
+
+        .hero_cta {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            .hero_ctaButton {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                border: none;
+                background-color: #707070;
+                transition: .5s ease-in-out;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:hover {
+                    opacity: .5;
+                }
+
+                svg {
+                    font-size: 25px;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .hero_right {
+        flex: 1.5;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .hero_rightTop {
+            display: flex;
+            gap: 20px;
+
+            .hero_highlight {
+                flex: 1;
+                flex-basis: 1;
+                background-image: url(../../../arquivos//fundo_locais.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 316px;
+                height: 274px;
+                border-radius: 20px;
+                padding: 20px;
+                display: flex;
+
+                .hero_highlightArea {
+                    background: #CBFB4529;
+                    backdrop-filter: blur(6px);
+                    border-radius: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    padding: 20px 30px;
+                    color: #fff;
+                    gap: 30px;
+                    width: 100%;
+
+                    .hero_highlightIcon {
+                        font-size: 35px;
+                    }
+
+                    .hero_highlightTitle {
+                        font-size: 24px;
+                        font-family: 'AlteHaasGroteskBold';
+                        line-height: 23px;
+                        letter-spacing: 0%;
+
+                    }
+
+                    .hero_highlightText {
+                        font-weight: 400;
+                        font-size: 15px;
+                        line-height: 19px;
+                        letter-spacing: 0%;
+                    }
+                }
+
+                &:nth-child(even) {
+                    background-image: none;
+                    background-color: #CBFB45;
+
+                    .hero_highlightArea {
+                        color: #000000;
+                    }
+                }
+            }
+        }
+
+        .hero_search {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            background-image: url(../../../arquivos/hero_search.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            padding: 20px;
+            min-height: 265px;
+
+            .hero_searchButton {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                border: none;
+                background-color: #707070;
+                transition: .5s ease-in-out;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:hover {
+                    opacity: .5;
+                }
+
+                svg {
+                    font-size: 25px;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1170px) {
+        .hero_left {
+            .hero_titleArea {
+                .hero_title {
+                    font-size: 56px;
+                    line-height: 70px;
+                    letter-spacing: 0%;
+                }
+
+                .hero_description {
+                    font-size: 13px;
+                    line-height: 19px;
+                    letter-spacing: 0%;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1170px) {
+        flex-direction: column;
+
+        .hero_left {
+            max-width: none;
+        }
+    }
+
+    @media (max-width: 700px) {
+        .hero_right {
+            .hero_rightTop {
+                flex-direction: column;
+
+                .hero_highlight {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

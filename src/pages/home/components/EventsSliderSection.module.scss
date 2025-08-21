@@ -29,6 +29,11 @@
       gap: 50px;
       padding: 0px 50px;
 
+      @media (max-width: 850px) {
+        text-align: center;
+        padding: 0px 20px;
+      }
+
       .eventsTitle {
         font-size: 76px;
         line-height: 68px;
@@ -104,6 +109,7 @@
       }
     }
 
+    /* ---- CARROSSEL DE DETALHES (PING-PONG AJUSTADO) ---- */
     .eventsDetailsCarouselWrapper {
       overflow: hidden;
       width: 100%;
@@ -111,29 +117,47 @@
 
       .eventsDetailsCarouselTrack {
         display: flex;
-        width: 200%; /* Dobro do conteúdo para loop suave */
-        animation: scrollDetails 5s linear infinite; /* Tempo ajustado para suavidade */
-        gap: 40px;
         align-items: center;
-        padding: 0 50px;
+        white-space: nowrap;
+        will-change: transform;
+        width: max-content; // evita que os itens saiam do container
+        animation: detailsPingPong var(--scroll-duration, 16s) linear infinite alternate;
+        background: #8CB716;
+        height: 81px;
 
-        .eventsDetailsItem {
+        @media (min-width: 1400px) {
+          animation: none;
+        }
+
+        .eventsDetailsItemPai {
           display: flex;
           align-items: center;
-          gap: 8px;
-          white-space: nowrap;
 
           svg {
-            font-size: 12px;
-            color: #1F5714;
+            font-size: 20px;
+            color: #D9D9D9;
           }
 
-          span {
-            font-size: 14px;
-            font-weight: 500;
-            color: #1F5714;
+          .eventsDetailsItem {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+            padding: 15px 30px;
+
+            span {
+              color: #fff;
+              font-size: 20px;
+              line-height: 100%;
+              letter-spacing: 0%;
+              font-family: 'AlteHaasGroteskBold';
+            }
           }
         }
+      }
+
+      &:hover .eventsDetailsCarouselTrack {
+        animation-play-state: paused;
       }
     }
   }
@@ -143,16 +167,25 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
 }
 
-@keyframes scrollDetails {
-  0% {
+@keyframes detailsPingPong {
+  from {
     transform: translateX(0);
   }
-  100% {
-    transform: translateX(-50%);
+
+  to {
+    transform: translateX(calc(-1 * var(--scroll-range, 0px)));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .eventsDetailsCarouselWrapper .eventsDetailsCarouselTrack {
+    animation: none !important;
+    transform: none !important;
   }
 }

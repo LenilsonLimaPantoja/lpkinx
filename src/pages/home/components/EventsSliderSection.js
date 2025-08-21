@@ -1,20 +1,15 @@
+import React, { useRef, useLayoutEffect, useEffect } from 'react';
 import styles from './EventsSliderSection.module.scss';
+
 import img1 from '../../../arquivos/carrossel/1.png';
 import img2 from '../../../arquivos/carrossel/2.gif';
 import img3 from '../../../arquivos/carrossel/3.png';
 import img4 from '../../../arquivos/carrossel/4.png';
 import img5 from '../../../arquivos/carrossel/5.png';
+
 import { VscDebugBreakpointLog } from "react-icons/vsc";
-import React from 'react';
 
-const images = [
-    img1,
-    img2,
-    img3,
-    img4,
-    img5,
-];
-
+const images = [img1, img2, img3, img4, img5];
 const dados = [
     "Controle de Eventos",
     "Emissão de Tickets",
@@ -24,8 +19,60 @@ const dados = [
 ];
 
 const EventsSliderSection = () => {
-    const carouselImages = [...images, ...images]; // duplicadas para loop suave
-    const details = [...dados, ...dados, ...dados]; // duplicadas 2 vezes para loop suave
+    const carouselImages = [...images, ...images];
+    const detailsWrapperRef = useRef(null);
+    const detailsTrackRef = useRef(null);
+
+    // calcula range do ping-pong
+    useLayoutEffect(() => {
+        const update = () => {
+            const wrapper = detailsWrapperRef.current;
+            const track = detailsTrackRef.current;
+            if (!wrapper || !track) return;
+
+            // limita a largura do track ao container
+            track.style.width = 'max-content';
+
+            const range = Math.max(0, track.scrollWidth - wrapper.clientWidth);
+            track.style.setProperty('--scroll-range', `${range}px`);
+
+            const pxPerSec = 60;
+            const duration = Math.max(8, range / pxPerSec);
+            track.style.setProperty('--scroll-duration', `${duration}s`);
+        };
+
+        update();
+        window.addEventListener('resize', update);
+        const id = requestAnimationFrame(update);
+
+        return () => {
+            window.removeEventListener('resize', update);
+            cancelAnimationFrame(id);
+        };
+    }, []);
+
+    // fallback scroll alternado caso queira JS
+    useEffect(() => {
+        const wrapper = detailsWrapperRef.current;
+        const track = detailsTrackRef.current;
+        if (!wrapper || !track) return;
+
+        let direction = 1;
+        let rafId;
+
+        const step = () => {
+            if (!wrapper || !track) return;
+
+            track.scrollLeft += direction * 1.5; // velocidade
+            if (track.scrollLeft >= track.scrollWidth - wrapper.clientWidth) direction = -1;
+            if (track.scrollLeft <= 0) direction = 1;
+
+            rafId = requestAnimationFrame(step);
+        };
+
+        rafId = requestAnimationFrame(step);
+        return () => cancelAnimationFrame(rafId);
+    }, []);
 
     return (
         <div className={styles.eventsSection}>
@@ -40,15 +87,16 @@ const EventsSliderSection = () => {
                     </div>
 
                     <p className={styles.eventsDescription}>
-                        No KiNX, você tem o controle total do seu evento de um jeito simples e direto. Dá pra escolher quem participa, criar categorias de acesso, organizar os lotes, incluir perguntas personalizadas e até liberar conteúdos diferentes conforme o perfil de cada pessoa. Tudo isso num painel fácil de usar, feito pra quem quer montar algo autêntico, do rolê mais reservado à festa mais insana. E o melhor: com segurança, privacidade e liberdade pra fazer do seu jeito.
+                        No KiNX, você tem o controle total do seu evento de um jeito simples e direto...
                     </p>
 
                     <span className={styles.featuredEventsLabel}>Eventos em Destaque:</span>
                 </div>
 
+                {/* Carrossel de imagens */}
                 <div className={styles.eventsCarouselWrapper}>
                     <div className={styles.eventsCarouselTrack}>
-                        {carouselImages?.map((src, index) => (
+                        {carouselImages.map((src, index) => (
                             <div key={index} className={styles.eventsCarouselItem}>
                                 <img src={src} alt={`Slide ${index + 1}`} />
                                 <div className={styles.eventInfoOverlay}>
@@ -61,12 +109,15 @@ const EventsSliderSection = () => {
                     </div>
                 </div>
 
-                <div className={styles.eventsDetailsCarouselWrapper}>
-                    <div className={styles.eventsDetailsCarouselTrack}>
-                        {details.map((dado, index) => (
-                            <div key={index} className={styles.eventsDetailsItem}>
-                                <VscDebugBreakpointLog />
-                                <span>{dado}</span>
+                {/* Carrossel de detalhes (ping-pong ajustado) */}
+                <div className={styles.eventsDetailsCarouselWrapper} ref={detailsWrapperRef}>
+                    <div className={styles.eventsDetailsCarouselTrack} ref={detailsTrackRef}>
+                        {dados.map((dado, index) => (
+                            <div key={index} className={styles.eventsDetailsItemPai}>
+                                {index > 0 && <VscDebugBreakpointLog />}
+                                <div className={styles.eventsDetailsItem}>
+                                    <span>{dado}</span>
+                                </div>
                             </div>
                         ))}
                     </div>
