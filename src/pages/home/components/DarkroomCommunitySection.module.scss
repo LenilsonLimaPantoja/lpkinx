@@ -1,0 +1,142 @@
+.sectionContainer {
+    display: flex;
+    gap: 20px;
+    padding: 60px 0px;
+    color: #fff;
+
+    .sectionLeft {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        min-width: 495px;
+
+        .sectionSubtitle {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 100%;
+            color: #fff;
+        }
+
+        .sectionTitle {
+            font-family: 'AlteHaasGroteskBold';
+            font-size: 70px;
+            line-height: 65px;
+            max-width: 495px;
+            color: #707070;
+
+            span {
+                font-family: 'AlteHaasGroteskBold';
+                color: #CBFB45;
+            }
+        }
+
+        .sectionButton {
+            width: 130px;
+            height: 33px;
+            border-radius: 25px;
+            background-color: #CBFB45;
+            font-family: 'AlteHaasGroteskBold';
+            font-size: 12px;
+            border: none;
+            cursor: pointer;
+            transition: .5s ease-in-out;
+            margin-top: 20px;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+
+    .sectionRight {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        .sectionDescription {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: 0%;
+            color: #707070;
+        }
+
+        .cardsContainer {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            .card {
+                background: #202020;
+                padding: 30px;
+                display: flex;
+                flex-direction: column;
+                border-radius: 29px;
+
+
+                .cardIconWrapper {
+                    display: flex;
+                    justify-content: flex-end;
+
+                    button {
+                        background-color: #CBFB45;
+                        border-radius: 50%;
+                        padding: 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                        transition: .5s ease-in-out;
+                        border: none;
+
+                        svg {
+                            color: #232323;
+                            font-size: 20px;
+                        }
+
+                        &:hover {
+                            opacity: .5;
+                        }
+                    }
+                }
+
+                .cardText {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    .cardTitle {
+                        font-weight: 400;
+                        font-size: 20px;
+                        line-height: 100%;
+                        letter-spacing: 0%;
+                        color: #fff;
+                    }
+
+                    .cardDescription {
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 20px;
+                        letter-spacing: 0%;
+                        color: #707070;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1000px) {
+        flex-direction: column;
+
+        .sectionLeft {
+            text-align: center;
+            align-items: center;
+        }
+
+        .sectionRight {
+            .sectionDescription {
+                text-align: center;
+            }
+        }
+    }
+}

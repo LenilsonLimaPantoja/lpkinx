@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import PremiumSection from './pages/home/components/PremiumSection';
+import CreateAndPromoteSection from './pages/home/components/CreateAndPromoteSection';
+import Footer from './pages/home/components/Footer';
+import styles from './App.module.scss';
+import InvisivelGanhaForma from './pages/home/components/InvisivelGanhaForma';
+import DarkroomCommunitySection from './pages/home/components/DarkroomCommunitySection';
+import EventsSliderSection from './pages/home/components/EventsSliderSection';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.container}>
+      <div className={styles.area}>
+        <PremiumSection />
+        <CreateAndPromoteSection />
+        <EventsSliderSection/>
+        <DarkroomCommunitySection />
+        <InvisivelGanhaForma />
+        <Footer />
+      </div>
     </div>
   );
 }

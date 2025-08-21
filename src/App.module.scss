@@ -1,0 +1,10 @@
+.container {
+    background-color: #232323;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    .area {
+        width: 100%;
+        max-width: 1333px;
+    }
+}

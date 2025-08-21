@@ -1,0 +1,16 @@
+.sectionContainer {
+    background: #CBFB45;
+    height: 463px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .sectionTitle {
+        max-width: 495px;
+        font-family: 'AlteHaasGroteskBold';
+        font-size: 70px;
+        line-height: 65px;
+        letter-spacing: 0%;
+        text-align: center;
+    }
+}
