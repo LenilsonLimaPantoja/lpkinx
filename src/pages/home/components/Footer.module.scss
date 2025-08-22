@@ -3,13 +3,14 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 100px;
-    padding: 100px;
+    gap: 128px;
+    padding: 179px 201px 116px 201px;
+    width: 100%;
 
     .footerLeft {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 38px;
 
         .footerLogo {
             width: 212px;
@@ -27,7 +28,7 @@
         .footerSocialIcons {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 24px;
 
             .footerIcon {
                 font-size: 32px;
@@ -46,17 +47,17 @@
         flex-grow: 1;
         display: flex;
         flex-direction: column;
-        gap: 50px;
+        gap: 72px;
 
         .footerLinksWrapper {
             display: flex;
-            gap: 100px;
+            gap: 72px;
 
             .footerLinksSection {
                 display: flex;
                 flex-direction: column;
                 flex-grow: 1;
-                gap: 30px;
+                gap: 37px;
 
                 .footerSectionTitle {
                     font-family: 'AlteHaasGroteskBold';
@@ -85,7 +86,7 @@
         .footerBottomSection {
             display: flex;
             flex-direction: column;
-            gap: 30px;
+            gap: 42px;
             max-width: 650px;
 
             .footerCopyright {
@@ -163,6 +164,7 @@
             }
         }
     }
+
     @media (max-width: 600px) {
         .footerRight {
             .footerLinksWrapper {

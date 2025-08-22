@@ -2,9 +2,41 @@
     background-color: #232323;
     display: flex;
     justify-content: center;
-    padding: 10px;
+
     .area {
         width: 100%;
-        max-width: 1333px;
+        max-width: 1366px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        .chat_button {
+            width: 49px;
+            height: 106px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            right: 0px;
+            top: 150px;
+            background-color: #CBFB45;
+            writing-mode: vertical-lr;
+            text-orientation: mixed;
+            border-radius: 15px 0 0 15px;
+            cursor: pointer;
+            gap: 6px;
+            font-size: 15px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            font-family: 'AlteHaasGroteskBold';
+
+            svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
+
     }
 }

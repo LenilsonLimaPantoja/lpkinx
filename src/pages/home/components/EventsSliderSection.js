@@ -15,7 +15,7 @@ const dados = [
     "Emissão de Tickets",
     "Definição de Perfis",
     "Sigilo e Discrição",
-    "Pagamentos Antecipados"
+    "Pagamentos Antecipados",
 ];
 
 const EventsSliderSection = () => {
@@ -30,8 +30,8 @@ const EventsSliderSection = () => {
             const track = detailsTrackRef.current;
             if (!wrapper || !track) return;
 
-            // limita a largura do track ao container
-            track.style.width = 'max-content';
+            // garante largura mínima do track igual ao wrapper
+            track.style.width = Math.max(track.scrollWidth, wrapper.clientWidth) + 'px';
 
             const range = Math.max(0, track.scrollWidth - wrapper.clientWidth);
             track.style.setProperty('--scroll-range', `${range}px`);
@@ -87,9 +87,8 @@ const EventsSliderSection = () => {
                     </div>
 
                     <p className={styles.eventsDescription}>
-                        No KiNX, você tem o controle total do seu evento de um jeito simples e direto...
+                        No KiNX, você tem o controle total do seu evento de um jeito simples e direto. Dá pra escolher quem participa, criar categorias de acesso, organizar os lotes, incluir perguntas personalizadas e até liberar conteúdos diferentes conforme o perfil de cada pessoa. Tudo isso num painel fácil de usar, feito pra quem quer montar algo autêntico, do rolê mais reservado à festa mais insana. E o melhor: com segurança, privacidade e liberdade pra fazer do seu jeito.
                     </p>
-
                     <span className={styles.featuredEventsLabel}>Eventos em Destaque:</span>
                 </div>
 

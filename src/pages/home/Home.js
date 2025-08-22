@@ -10,12 +10,16 @@ import WelcomeSection from "./components/WelcomeSection";
 const Home = () => {
     return (
         <>
-        <Header/>
-            <WelcomeSection />
+            <div style={{ width: '100%', padding: '36px 95px 0px 95px' }}>
+                <Header />
+                <WelcomeSection />
+            </div>
             <PremiumSection />
             <CreateAndPromoteSection />
             <EventsSliderSection />
-            <DarkroomCommunitySection />
+            <div style={{ width: '100%', padding: '0px 95px' }}>
+                <DarkroomCommunitySection />
+            </div>
             <InvisivelGanhaForma />
             <Footer />
         </>

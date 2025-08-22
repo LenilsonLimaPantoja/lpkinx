@@ -1,18 +1,16 @@
 $color-bg: #262626;
 $color-text: #707070;
 $color-accent: #CBFB45;
-$gap-lg: 50px;
-$gap-md: 20px;
 
 .premiumSection {
     background-color: $color-bg;
-    padding: 50px;
-    max-width: 1333px;
+    padding: 32px 95px 154px 95px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: $gap-lg;
+    gap: 118px;
+    width: 100%;
 
     .togglePremiumInfo {
         font-size: 37px;
@@ -28,12 +26,13 @@ $gap-md: 20px;
     .premiumContent {
         display: flex;
         align-items: center;
-        gap: $gap-lg;
+        width: 100%;
+        gap: 80px;
 
         .premiumLeft {
             display: flex;
             flex-direction: column;
-            gap: $gap-md;
+            gap: 19px;
             align-items: flex-end;
 
             .premiumLogo {

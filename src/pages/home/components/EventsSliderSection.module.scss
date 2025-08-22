@@ -4,6 +4,7 @@
   background-color: #CBFB45;
   position: relative;
   overflow: hidden;
+  width: 100%;
 
   .sectionLabel {
     font-family: 'AlteHaasGroteskBold';
@@ -21,13 +22,13 @@
   .eventsContent {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 51px;
 
     .eventsTextos {
       display: flex;
       flex-direction: column;
-      gap: 50px;
-      padding: 0px 50px;
+      gap: 33px;
+      padding: 0px 142px;
 
       @media (max-width: 850px) {
         text-align: center;
@@ -72,13 +73,14 @@
 
         .eventsCarouselItem {
           flex-shrink: 0;
-          width: 300px;
+          width: 452px;
           height: 200px;
-          margin-right: 20px;
+          margin-right: 22px;
           position: relative;
           overflow: hidden;
           border-radius: 30px;
           border: 5px solid #1F57146B;
+            height: 303px;
 
           img {
             width: 100%;
@@ -113,7 +115,7 @@
     .eventsDetailsCarouselWrapper {
       overflow: hidden;
       width: 100%;
-      margin-top: 40px;
+      margin-top: 99px;
 
       .eventsDetailsCarouselTrack {
         display: flex;

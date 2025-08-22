@@ -3,22 +3,21 @@
   align-items: center;
   justify-content: space-between;
   background-color: #232323;
-  max-width: 1333px;
-  padding: 50px 0px;
-  gap: 70px;
+  padding: 128px 87px 161px 142px;
+  gap: 77px;
+  width: 100%;
 
   .createPromoteLeft {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 41px;
     position: relative;
-    padding-left: 40px;
 
     .webcamImage {
       width: 182px;
       height: 165px;
-      left: -30px;
-      top: -30px;
+      left: -70px;
+      top: -50px;
       position: absolute;
     }
 

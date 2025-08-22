@@ -28,10 +28,10 @@ const Footer = () => {
 
                     <div className={styles.footerLinksSection}>
                         <span className={styles.footerSectionTitle}>Precisa de Ajuda</span>
-                        <span className={styles.footerLink}>Criadores</span>
-                        <span className={styles.footerLink}>Darkrooms</span>
-                        <span className={styles.footerLink}>Estabelecimentos</span>
-                        <span className={styles.footerLink}>Eventos</span>
+                        <span className={styles.footerLink}>Perguntas Frequentes</span>
+                        <span className={styles.footerLink}>Fale Conosco</span>
+                        <span className={styles.footerLink}>Imprensa</span>
+                        <span className={styles.footerLink}>Como Funciona</span>
                     </div>
                 </div>
 
