@@ -18,7 +18,7 @@ const Home = () => {
                 <WelcomeSection />
             </div>
             {verOcultarPlanos ?
-                <PremiumSectionPlanos setVerOcultarPlanos={setVerOcultarPlanos} />
+                <PremiumSectionPlanos style={{}} setVerOcultarPlanos={setVerOcultarPlanos} />
                 :
                 <PremiumSection setVerOcultarPlanos={setVerOcultarPlanos} />
             }
