@@ -2,14 +2,20 @@ import styles from './PremiumSection.module.scss';
 import kinx_premium_access from '../../../arquivos/kinx_premium_acess.png';
 import { TfiArrowCircleDown } from "react-icons/tfi";
 
-function PremiumSection() {
+function PremiumSection({ setVerOcultarPlanos }) {
   return (
     <div className={styles.premiumSection}>
-      <TfiArrowCircleDown className={styles.togglePremiumInfo} />
+      <TfiArrowCircleDown
+        onClick={() => setVerOcultarPlanos(true)}
+        className={styles.togglePremiumInfo}
+      />
       <div className={styles.premiumContent}>
         <div className={styles.premiumLeft}>
           <img src={kinx_premium_access} alt="Logo Premium" className={styles.premiumLogo} />
-          <button className={styles.viewPlansBtn}>
+          <button
+            onClick={() => setVerOcultarPlanos(true)}
+            className={styles.viewPlansBtn}
+          >
             Ver Planos
           </button>
         </div>

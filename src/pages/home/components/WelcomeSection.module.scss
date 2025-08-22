@@ -98,6 +98,12 @@
                 border-radius: 20px;
                 padding: 20px;
                 display: flex;
+                cursor: pointer;
+                transition: .5s ease-in-out;
+
+                &:hover {
+                    opacity: .5;
+                }
 
                 .hero_highlightArea {
                     background: #CBFB4529;
