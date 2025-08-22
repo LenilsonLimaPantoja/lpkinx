@@ -28,7 +28,6 @@ const WelcomeSection = () => {
 
             <div className={styles.hero_right}>
                 <div className={styles.hero_rightTop}>
-                    
                     <div className={styles.hero_highlight}>
                         <div className={styles.hero_highlightArea}>
                             <RiStore2Line className={styles.hero_highlightIcon} />

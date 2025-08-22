@@ -1,5 +1,5 @@
 import styles from './Footer.module.scss';
-import logo_light from '../../../arquivos/logo_light.png';
+import logo_light from '../arquivos/logo_light.png';
 import { FaXTwitter, FaInstagram, FaWhatsapp, FaTelegram } from "react-icons/fa6";
 
 const Footer = () => {

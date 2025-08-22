@@ -34,10 +34,11 @@
                 opacity: .5;
             }
 
-            &:nth-child(1) {
-                color: #fff;
-                font-weight: 700;
-            }
+
+        }
+
+        .active {
+            color: #fff;
         }
     }
 

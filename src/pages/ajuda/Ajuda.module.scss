@@ -1,0 +1,244 @@
+.faqPage {
+    width: 100%;
+
+    .faqHeader {
+        background-color: #CBFB45;
+        padding: 36px 95px 59px 95px;
+        display: flex;
+        flex-direction: column;
+        gap: 38px;
+
+        .faqHeaderContent {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 0px 47px;
+
+            .faqHeaderTitle {
+                font-family: 'AlteHaasGroteskBold';
+                font-size: 40px;
+                line-height: 42px;
+                letter-spacing: 0%;
+            }
+
+            .faqHeaderDescription {
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                max-width: 683px;
+            }
+        }
+    }
+
+    .faqSearchBar {
+        display: flex;
+        align-items: center;
+        padding: 48px 134px 0px 134px;
+        gap: 11px;
+
+        .searchCategory {
+            flex-grow: 1;
+            max-width: 209px;
+            height: 52px;
+            border-radius: 8px;
+            display: flex;
+            overflow: hidden;
+
+            select {
+                width: 100%;
+                background-color: #444444;
+                color: #fff;
+                outline: none;
+                padding: 17px 19px;
+                border: none;
+
+                option {
+                    font-size: 15px;
+                    font-weight: 400;
+                    line-height: 100%;
+                    letter-spacing: 0%;
+                }
+            }
+        }
+
+        .searchInputWrapper {
+            background-color: #444444;
+            flex-grow: 1;
+            max-width: 532px;
+            height: 52px;
+            opacity: 1;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            padding: 6px 6px 6px 28px;
+
+            .searchIcon {
+                font-size: 25px;
+                color: #707070;
+            }
+
+            input {
+                font-size: 15px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                flex-grow: 1;
+                height: 100%;
+                padding: 0px 21px;
+                outline: none;
+                background-color: transparent;
+                border: none;
+                color: #707070;
+            }
+
+            .searchButton {
+                height: 100%;
+                width: 111px;
+                opacity: 1;
+                border-radius: 8px;
+                border: none;
+                background: #CBFB45;
+                font-size: 15px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                font-family: 'AlteHaasGroteskBold';
+                cursor: pointer;
+                transition: .5s ease-in-out;
+
+                &:hover {
+                    opacity: .5;
+                }
+            }
+        }
+    }
+
+    .faqContentWrapper {
+        display: flex;
+        align-items: flex-start;
+        padding: 79px 160px 0px 160px;
+        gap: 105px;
+
+        .faqSidebar {
+            min-width: 240px;
+
+            .sidebarList {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: 19px;
+
+                .sidebarItem {
+                    font-size: 20px;
+                    line-height: 100%;
+                    letter-spacing: 0%;
+                    font-family: 'AlteHaasGroteskBold';
+                    color: #fff;
+                    cursor: pointer;
+                    transition: .5s ease-in-out;
+
+                    &:hover {
+                        opacity: .5;
+                    }
+                }
+            }
+        }
+
+        .faqMainContent {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+
+            .faqTitle {
+                font-family: 'AlteHaasGroteskBold';
+                font-size: 40px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                color: #707070;
+            }
+
+            .faqList {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                padding: 0px 28px;
+
+                .faqItem {
+                    display: flex;
+                    flex-direction: column;
+
+                    .faqQuestion {
+                        background-color: #232323;
+                        height: 48px;
+                        border-radius: 8px;
+                        padding: 0px 10px;
+                        flex-grow: 1;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        border: none;
+                        cursor: pointer;
+                        transition: .5s ease-in-out;
+
+                        &:hover {
+                            opacity: .5;
+                        }
+
+                        span {
+                            font-size: 20px;
+                            line-height: 100%;
+                            letter-spacing: 0%;
+                            color: #fff;
+                        }
+
+                        .spanAtivado {
+                            font-family: 'AlteHaasGroteskBold';
+                            color: #CBFB45;
+                        }
+
+                        svg {
+                            font-size: 22px;
+                            color: #707070;
+                        }
+                    }
+
+                    &:nth-child(even) {
+                        .faqQuestion {
+                            background-color: transparent;
+                        }
+                    }
+
+                    .faqAnswer {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 30px;
+                        font-size: 15px;
+                        line-height: 100%;
+                        letter-spacing: 0%;
+                        color: #D9D9D9;
+                        padding: 25px;
+
+                        p {
+                            // parágrafos das respostas
+                        }
+
+                        .pBold {
+                            font-family: 'AlteHaasGroteskBold';
+                        }
+
+                        ul {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 5px;
+                            padding-left: 15px;
+
+                            li {
+                                // itens da lista
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

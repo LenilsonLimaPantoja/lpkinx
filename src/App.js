@@ -1,11 +1,11 @@
 import styles from './App.module.scss';
-import Home from './pages/home/Home';
+import Rotas from './pages/rotas/Rotas';
 
 function App() {
   return (
     <div className={styles.container}>
       <div className={styles.area}>
-        <Home />
+        <Rotas />
         <div className={styles.chat_button}>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
