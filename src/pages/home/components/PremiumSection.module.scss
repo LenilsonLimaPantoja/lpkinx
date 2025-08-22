@@ -11,6 +11,12 @@ $color-accent: #CBFB45;
     align-items: center;
     gap: 118px;
     width: 100%;
+    transform: translateY(50%);
+    overflow: hidden;
+    animation-name: expandContainer;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     .togglePremiumInfo {
         font-size: 37px;
@@ -85,5 +91,11 @@ $color-accent: #CBFB45;
                 max-width: none;
             }
         }
+    }
+}
+
+@keyframes expandContainer {
+    100% {
+        transform: translateY(0);
     }
 }
