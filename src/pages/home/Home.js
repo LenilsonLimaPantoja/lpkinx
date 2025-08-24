@@ -8,28 +8,52 @@ import InvisivelGanhaForma from "./components/InvisivelGanhaForma";
 import PremiumSection from "./components/PremiumSection";
 import PremiumSectionPlanos from "./components/PremiumSectionPlanos";
 import WelcomeSection from "./components/WelcomeSection";
+import styles from './Home.module.scss';
 
 const Home = () => {
     const [verOcultarPlanos, setVerOcultarPlanos] = useState(false);
     return (
         <>
-            <div style={{ width: '100%', padding: '36px 95px 0px 95px', background: '#232323' }}>
-                <Header />
-                <WelcomeSection />
+            <div className={styles.sectionDark}>
+                <div className={styles.containerWithPadding}>
+                    <Header />
+                    <WelcomeSection />
+                </div>
             </div>
-            {verOcultarPlanos ?
-                <PremiumSectionPlanos style={{}} setVerOcultarPlanos={setVerOcultarPlanos} />
-                :
-                <PremiumSection setVerOcultarPlanos={setVerOcultarPlanos} />
-            }
-            <CreateAndPromoteSection />
+
+            <div className={styles.sectionDarker}>
+                <div className={styles.container}>
+                    {verOcultarPlanos ? (
+                        <PremiumSectionPlanos setVerOcultarPlanos={setVerOcultarPlanos} />
+                    ) : (
+                        <PremiumSection setVerOcultarPlanos={setVerOcultarPlanos} />
+                    )}
+                </div>
+            </div>
+
+            <div className={styles.sectionDark}>
+                <div className={styles.container}>
+                    <CreateAndPromoteSection />
+                </div>
+            </div>
+
             <EventsSliderSection />
-            <div style={{ width: '100%', padding: '0px 95px' }}>
-                <DarkroomCommunitySection />
+
+            <div className={styles.sectionDarkWithHorizontalPadding}>
+                <div className={styles.container}>
+                    <DarkroomCommunitySection />
+                </div>
             </div>
+
             <InvisivelGanhaForma />
-            <Footer />
+
+            <div className={styles.sectionDark}>
+                <div className={styles.container}>
+                    <Footer />
+                </div>
+            </div>
         </>
-    )
-}
+    );
+};
+
 export default Home;

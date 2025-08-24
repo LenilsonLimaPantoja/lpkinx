@@ -152,73 +152,77 @@ const Ajuda = () => {
 
     return (
         <div className={styles.faqPage}>
-            <div className={styles.faqHeader}>
-                <Header />
-                <div className={styles.faqHeaderContent}>
-                    <h1 className={styles.faqHeaderTitle}>Como podemos Ajudar?</h1>
-                    <p className={styles.faqHeaderDescription}>Tem dúvidas sobre como usar a plataforma, monetizar conteúdos ou participar das comunidades? Acesse nosso FAQ para encontrar respostas rápidas sobre funcionalidades, segurança, pagamentos e muito mais. Se não encontrar o que procura, nosso time de suporte está sempre disponível para ajudar, garantindo que sua experiência no KiNX seja completa, segura e personalizada.</p>
+            <div className={styles.faqHeaderArea}>
+                <div className={styles.faqHeader}>
+                    <Header />
+                    <div className={styles.faqHeaderContent}>
+                        <h1 className={styles.faqHeaderTitle}>Como podemos Ajudar?</h1>
+                        <p className={styles.faqHeaderDescription}>Tem dúvidas sobre como usar a plataforma, monetizar conteúdos ou participar das comunidades? Acesse nosso FAQ para encontrar respostas rápidas sobre funcionalidades, segurança, pagamentos e muito mais. Se não encontrar o que procura, nosso time de suporte está sempre disponível para ajudar, garantindo que sua experiência no KiNX seja completa, segura e personalizada.</p>
+                    </div>
                 </div>
             </div>
             {/* Barra de busca */}
-            <div className={styles.faqSearchBar}>
-                <label className={styles.searchCategory}>
-                    <select>
-                        <option>Financeiro</option>
-                        <option>Login</option>
-                        <option>Postagem</option>
-                    </select>
-                </label>
-                <div className={styles.searchInputWrapper}>
-                    <IoIosSearch className={styles.searchIcon} />
-                    <input
-                        type="text"
-                        className={styles.searchInput}
-                        placeholder="Procurar Ajuda"
-                    />
-                    <button className={styles.searchButton}>Buscar</button>
-                </div>
-            </div>
-
-            <div className={styles.faqContentWrapper}>
-                {/* Menu lateral */}
-                <aside className={styles.faqSidebar}>
-                    <ul className={styles.sidebarList}>
-                        <li className={styles.sidebarItem}>Quem Somos?</li>
-                        <li className={styles.sidebarItem}>Como Funciona o KINX?</li>
-                        <li className={styles.sidebarItem}>Financeiro</li>
-                        <li className={styles.sidebarItem}>Nossas Funcionalidades</li>
-                        <li className={styles.sidebarItem}>Minha Conta</li>
-                        <li className={styles.sidebarItem}>Fale Conosco</li>
-                        <li className={`${styles.sidebarItem} ${styles.sidebarItemActive}`}>
-                            Perguntas Frequentes
-                        </li>
-                    </ul>
-                </aside>
-
-                {/* Conteúdo principal */}
-                <main className={styles.faqMainContent}>
-                    <h1 className={styles.faqTitle}>Perguntas Frequentes</h1>
-
-                    <div className={styles.faqList}>
-                        {faqs.map((item, index) => (
-                            <div key={index} className={styles.faqItem}>
-                                <button
-                                    className={styles.faqQuestion}
-                                    onClick={() => toggleQuestion(index)}
-                                >
-                                    <span className={openIndex === index ? styles.spanAtivado : ''}
-                                    >{item.question}</span>
-                                    {openIndex === index ? <TfiArrowCircleUp color="#CBFB45" /> : <TfiArrowCircleDown />}
-                                </button>
-                                {openIndex === index && (
-                                    <div className={styles.faqAnswer}>{item.answer}</div>
-                                )}
-                            </div>
-                        ))}
+            <div className={styles.faqSearchBarArea}>
+                <div className={styles.faqSearchBar}>
+                    <label className={styles.searchCategory}>
+                        <select>
+                            <option>Financeiro</option>
+                            <option>Login</option>
+                            <option>Postagem</option>
+                        </select>
+                    </label>
+                    <div className={styles.searchInputWrapper}>
+                        <IoIosSearch className={styles.searchIcon} />
+                        <input
+                            type="text"
+                            className={styles.searchInput}
+                            placeholder="Procurar Ajuda"
+                        />
+                        <button className={styles.searchButton}>Buscar</button>
                     </div>
-                </main>
+                </div>
+
+                <div className={styles.faqContentWrapper}>
+                    {/* Menu lateral */}
+                    <aside className={styles.faqSidebar}>
+                        <ul className={styles.sidebarList}>
+                            <li className={styles.sidebarItem}>Quem Somos?</li>
+                            <li className={styles.sidebarItem}>Como Funciona o KINX?</li>
+                            <li className={styles.sidebarItem}>Financeiro</li>
+                            <li className={styles.sidebarItem}>Nossas Funcionalidades</li>
+                            <li className={styles.sidebarItem}>Minha Conta</li>
+                            <li className={styles.sidebarItem}>Fale Conosco</li>
+                            <li className={`${styles.sidebarItem} ${styles.sidebarItemActive}`}>
+                                Perguntas Frequentes
+                            </li>
+                        </ul>
+                    </aside>
+
+                    {/* Conteúdo principal */}
+                    <main className={styles.faqMainContent}>
+                        <h1 className={styles.faqTitle}>Perguntas Frequentes</h1>
+
+                        <div className={styles.faqList}>
+                            {faqs.map((item, index) => (
+                                <div key={index} className={styles.faqItem}>
+                                    <button
+                                        className={styles.faqQuestion}
+                                        onClick={() => toggleQuestion(index)}
+                                    >
+                                        <span className={openIndex === index ? styles.spanAtivado : ''}
+                                        >{item.question}</span>
+                                        {openIndex === index ? <TfiArrowCircleUp color="#CBFB45" /> : <TfiArrowCircleDown />}
+                                    </button>
+                                    {openIndex === index && (
+                                        <div className={styles.faqAnswer}>{item.answer}</div>
+                                    )}
+                                </div>
+                            ))}
+                        </div>
+                    </main>
+                </div>
+                <Footer />
             </div>
-            <Footer />
         </div>
     );
 };

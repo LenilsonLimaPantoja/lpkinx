@@ -1,8 +1,10 @@
 import styles from './Footer.module.scss';
 import logo_light from '../arquivos/logo_light.png';
 import { FaXTwitter, FaInstagram, FaWhatsapp, FaTelegram } from "react-icons/fa6";
+import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
+    const navigation = useNavigate();
     return (
         <footer className={styles.footerContainer}>
             <div className={styles.footerLeft}>
@@ -28,7 +30,7 @@ const Footer = () => {
 
                     <div className={styles.footerLinksSection}>
                         <span className={styles.footerSectionTitle}>Precisa de Ajuda</span>
-                        <span className={styles.footerLink}>Perguntas Frequentes</span>
+                        <span className={styles.footerLink} onClick={() => navigation('/ajuda')}>Perguntas Frequentes</span>
                         <span className={styles.footerLink}>Fale Conosco</span>
                         <span className={styles.footerLink}>Imprensa</span>
                         <span className={styles.footerLink}>Como Funciona</span>

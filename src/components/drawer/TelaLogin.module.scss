@@ -1,0 +1,146 @@
+.area_1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 34px;
+    padding-bottom: 43px;
+
+    .titulo_text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        gap: 9px;
+        max-width: 318px;
+
+        span {
+            font-family: 'AlteHaasGroteskBold';
+            font-size: 24px;
+            line-height: 30px;
+            letter-spacing: 0%;
+        }
+
+        p {
+            font-size: 12px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            font-family: 'AlteHaasGroteskBold';
+        }
+    }
+
+    .area_form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 318px;
+
+        .login_registrar {
+            background-color: #202020;
+            width: 100%;
+            height: 63px;
+            border-radius: 10px;
+            display: flex;
+            padding: 7px;
+            border: solid 1px #1c1c1c;
+
+            button {
+                flex-grow: 1;
+                flex-basis: 0;
+                border-radius: 10px;
+                border: none;
+                font-size: 12px;
+                cursor: pointer;
+                transition: .5s ease-in-out;
+                font-family: 'AlteHaasGroteskBold';
+                line-height: 100%;
+                letter-spacing: 0%;
+
+                &:hover {
+                    opacity: .5;
+                }
+            }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            margin-top: 14px;
+
+            button {
+                margin-top: 14px;
+            }
+        }
+    }
+}
+
+.area_footer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .ou_login {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 18px;
+
+        span {
+            color: #707070;
+            font-size: 12px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            font-family: 'AlteHaasGroteskBold';
+        }
+
+        .linha {
+            height: 1px;
+            background-color: #707070;
+            flex-grow: 1;
+        }
+    }
+
+    .area_icones_login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 35px;
+        width: 100%;
+
+        svg {
+            font-size: 19px;
+            color: #fff;
+            cursor: pointer;
+            transition: .5s ease-in-out;
+
+            &:hover {
+                opacity: .5;
+            }
+
+            &:nth-child(3) {
+                font-size: 30px;
+                margin-top: -3px;
+            }
+        }
+    }
+
+    .esqueceu_senha {
+        width: 100%;
+        color: #fff;
+        text-align: center;
+        cursor: pointer;
+        transition: .5s ease-in-out;
+        font-weight: 400;
+        font-size: 12px;
+        letter-spacing: 0%;
+        line-height: 100%;
+
+        &:hover {
+            opacity: .5;
+        }
+    }
+}

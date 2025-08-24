@@ -1,0 +1,15 @@
+.button {
+    width: 100%;
+    height: 63px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    transition: .5s ease-in-out;
+    font-family: 'AlteHaasGroteskBold';
+
+    &:hover {
+        opacity: .5;
+    }
+}

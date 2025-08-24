@@ -1,0 +1,67 @@
+.sectionDark {
+    width: 100%;
+    background: #232323;
+    display: flex;
+    justify-content: center;
+
+    .container {
+        width: 100%;
+        max-width: 1366px;
+        padding: 128px 10px 161px 10px;
+
+        @media (min-width: 1400px) {
+            padding: 128px 0px 161px 0px;
+        }
+    }
+
+    .containerWithPadding {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        max-width: 1366px;
+        padding: 20px 10px 136px 10px;
+
+        @media (min-width: 100px) {
+            gap: 20px;
+        }
+
+        @media (min-width: 1400px) {
+            padding: 36px 0px 136px 0px;
+        }
+    }
+}
+
+.sectionDarker {
+    width: 100%;
+    background: #262626;
+    display: flex;
+    justify-content: center;
+
+    .container {
+        width: 100%;
+        max-width: 1366px;
+        padding: 32px 20px 154px 20px;
+
+        @media (min-width: 1400px) {
+            padding: 32px 0px 154px 0px;
+        }
+    }
+}
+
+.sectionDarkWithHorizontalPadding {
+    width: 100%;
+    background: #232323;
+    display: flex;
+    justify-content: center;
+
+    .container {
+        width: 100%;
+        max-width: 1366px;
+        padding: 120px 10px 267px 10px;
+
+        @media (min-width: 1400px) {
+            padding: 120px 0px 267px 0px;
+        }
+    }
+}

@@ -1,7 +1,8 @@
 .hero_container {
     display: flex;
     gap: 21px;
-    padding: 47px 0px 136px 0px;
+    // padding: 47px 0px 136px 0px;
+    padding: 0px;
     width: 100%;
 
     .hero_left {
@@ -204,7 +205,7 @@
         }
     }
 
-    @media (max-width: 1170px) {
+    @media (max-width: 1160px) {
         flex-direction: column;
 
         .hero_left {

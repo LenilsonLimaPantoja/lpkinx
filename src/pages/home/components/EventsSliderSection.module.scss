@@ -5,6 +5,8 @@
   position: relative;
   overflow: hidden;
   width: 100%;
+  justify-content: center;
+  align-items: center;
 
   .sectionLabel {
     font-family: 'AlteHaasGroteskBold';
@@ -16,13 +18,13 @@
     background-clip: text;
     color: transparent;
     margin-top: -270px;
-    margin-left: -150px;
   }
 
   .eventsContent {
     display: flex;
     flex-direction: column;
     gap: 51px;
+    max-width: 1366px;
 
     .eventsTextos {
       display: flex;
@@ -74,13 +76,12 @@
         .eventsCarouselItem {
           flex-shrink: 0;
           width: 452px;
-          height: 200px;
+          height: 303px;
           margin-right: 22px;
           position: relative;
           overflow: hidden;
           border-radius: 30px;
           border: 5px solid #1F57146B;
-            height: 303px;
 
           img {
             width: 100%;
@@ -110,56 +111,53 @@
         }
       }
     }
+  }
 
-    /* ---- CARROSSEL DE DETALHES (PING-PONG AJUSTADO) ---- */
-    .eventsDetailsCarouselWrapper {
-      overflow: hidden;
+  /* ---- CARROSSEL DE DETALHES (PING-PONG AJUSTADO VIA JS) ---- */
+  .eventsDetailsCarouselWrapper {
+    overflow: hidden;
+    width: 100%;
+    margin-top: 99px;
+    background: #8CB716;
+    display: flex;
+    justify-content: center;
+
+    .eventsDetailsCarouselTrack {
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      will-change: transform;
+      width: max-content;
+      height: 81px;
       width: 100%;
-      margin-top: 99px;
+      max-width: 1366px;
+      transform: translateX(0);
+      /* REMOVA animação CSS */
+    }
 
-      .eventsDetailsCarouselTrack {
-        display: flex;
-        align-items: center;
-        white-space: nowrap;
-        will-change: transform;
-        width: max-content; // evita que os itens saiam do container
-        animation: detailsPingPong var(--scroll-duration, 16s) linear infinite alternate;
-        background: #8CB716;
-        height: 81px;
+    .eventsDetailsItemPai {
+      display: flex;
+      align-items: center;
 
-        @media (min-width: 1400px) {
-          animation: none;
-        }
-
-        .eventsDetailsItemPai {
-          display: flex;
-          align-items: center;
-
-          svg {
-            font-size: 20px;
-            color: #D9D9D9;
-          }
-
-          .eventsDetailsItem {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            white-space: nowrap;
-            padding: 15px 30px;
-
-            span {
-              color: #fff;
-              font-size: 20px;
-              line-height: 100%;
-              letter-spacing: 0%;
-              font-family: 'AlteHaasGroteskBold';
-            }
-          }
-        }
+      svg {
+        font-size: 20px;
+        color: #D9D9D9;
       }
 
-      &:hover .eventsDetailsCarouselTrack {
-        animation-play-state: paused;
+      .eventsDetailsItem {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        white-space: nowrap;
+        padding: 15px 30px;
+
+        span {
+          color: #fff;
+          font-size: 20px;
+          line-height: 100%;
+          letter-spacing: 0%;
+          font-family: 'AlteHaasGroteskBold';
+        }
       }
     }
   }
@@ -172,16 +170,6 @@
 
   100% {
     transform: translateX(-50%);
-  }
-}
-
-@keyframes detailsPingPong {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(calc(-1 * var(--scroll-range, 0px)));
   }
 }
 

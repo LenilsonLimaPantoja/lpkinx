@@ -1,4 +1,4 @@
-import React, { useRef, useLayoutEffect, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 import styles from './EventsSliderSection.module.scss';
 
 import img1 from '../../../arquivos/carrossel/1.png';
@@ -23,54 +23,36 @@ const EventsSliderSection = () => {
     const detailsWrapperRef = useRef(null);
     const detailsTrackRef = useRef(null);
 
-    // calcula range do ping-pong
-    useLayoutEffect(() => {
-        const update = () => {
-            const wrapper = detailsWrapperRef.current;
-            const track = detailsTrackRef.current;
-            if (!wrapper || !track) return;
-
-            // garante largura mínima do track igual ao wrapper
-            track.style.width = Math.max(track.scrollWidth, wrapper.clientWidth) + 'px';
-
-            const range = Math.max(0, track.scrollWidth - wrapper.clientWidth);
-            track.style.setProperty('--scroll-range', `${range}px`);
-
-            const pxPerSec = 60;
-            const duration = Math.max(8, range / pxPerSec);
-            track.style.setProperty('--scroll-duration', `${duration}s`);
-        };
-
-        update();
-        window.addEventListener('resize', update);
-        const id = requestAnimationFrame(update);
-
-        return () => {
-            window.removeEventListener('resize', update);
-            cancelAnimationFrame(id);
-        };
-    }, []);
-
-    // fallback scroll alternado caso queira JS
+    // Scroll ping-pong via transform
     useEffect(() => {
         const wrapper = detailsWrapperRef.current;
         const track = detailsTrackRef.current;
         if (!wrapper || !track) return;
 
+        let pos = 0;
         let direction = 1;
+        const speed = 1.5;
+
+        const maxPos = track.scrollWidth - wrapper.clientWidth;
+        if (maxPos <= 0) return; // Sem overflow, nada faz
+
         let rafId;
 
         const step = () => {
-            if (!wrapper || !track) return;
-
-            track.scrollLeft += direction * 1.5; // velocidade
-            if (track.scrollLeft >= track.scrollWidth - wrapper.clientWidth) direction = -1;
-            if (track.scrollLeft <= 0) direction = 1;
-
+            pos += direction * speed;
+            if (pos >= maxPos) {
+                pos = maxPos;
+                direction = -1;
+            } else if (pos <= 0) {
+                pos = 0;
+                direction = 1;
+            }
+            track.style.transform = `translateX(${-pos}px)`;
             rafId = requestAnimationFrame(step);
         };
 
         rafId = requestAnimationFrame(step);
+
         return () => cancelAnimationFrame(rafId);
     }, []);
 
@@ -107,19 +89,19 @@ const EventsSliderSection = () => {
                         ))}
                     </div>
                 </div>
+            </div>
 
-                {/* Carrossel de detalhes (ping-pong ajustado) */}
-                <div className={styles.eventsDetailsCarouselWrapper} ref={detailsWrapperRef}>
-                    <div className={styles.eventsDetailsCarouselTrack} ref={detailsTrackRef}>
-                        {dados.map((dado, index) => (
-                            <div key={index} className={styles.eventsDetailsItemPai}>
-                                {index > 0 && <VscDebugBreakpointLog />}
-                                <div className={styles.eventsDetailsItem}>
-                                    <span>{dado}</span>
-                                </div>
+            {/* Carrossel de detalhes (ping-pong ajustado) */}
+            <div className={styles.eventsDetailsCarouselWrapper} ref={detailsWrapperRef}>
+                <div className={styles.eventsDetailsCarouselTrack} ref={detailsTrackRef}>
+                    {dados.map((dado, index) => (
+                        <div key={index} className={styles.eventsDetailsItemPai}>
+                            {index > 0 && <VscDebugBreakpointLog />}
+                            <div className={styles.eventsDetailsItem}>
+                                <span>{dado}</span>
                             </div>
-                        ))}
-                    </div>
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>
