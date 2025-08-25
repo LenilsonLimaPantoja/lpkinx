@@ -338,7 +338,7 @@ const Darkroons = () => {
                                 ))}
                             </div>
                             <div className={styles.home_topicos_area_bottom}>
-                                <button onClick={() => navigation('/login/darkroom/feed')}>Ver Mais</button>
+                                <button onClick={() => navigation('/darkroom/feed')}>Ver Mais</button>
                             </div>
                         </div>
                     ))}
