@@ -8,7 +8,7 @@
         border-radius: 15px;
 
         .home_postagens_area_top {
-            padding: 36px;
+            padding: 46px 34px;
 
             span {
                 font-weight: 400;
@@ -27,21 +27,21 @@
         }
 
         .home_postagens_card {
-            padding: 36px;
+            padding: 28px 37px;
             display: flex;
-            column-gap: 20px;
+            column-gap: 41px;
             cursor: pointer;
 
             .home_postagens_card_body {
                 display: flex;
                 flex-direction: column;
-                row-gap: 10px;
+                gap: 10px;
                 flex-grow: 1;
 
                 .home_postagens_card_body_top {
                     display: flex;
                     align-items: center;
-                    column-gap: 10px;
+                    gap: 10px;
 
                     img {
                         width: 21px;
@@ -51,7 +51,7 @@
                     }
 
                     strong {
-                        font-weight: 700;
+                        font-family: 'AlteHaasGroteskBold';
                         font-size: 10px;
                         line-height: 42px;
                         letter-spacing: 0%;
@@ -100,7 +100,8 @@
                 width: 136px;
                 height: 112px;
                 border-radius: 8px;
-
+                object-fit: cover;
+                display: block;
             }
         }
     }

@@ -78,9 +78,11 @@
                             width: 33px;
                             height: 33px;
                             border-radius: 50%;
-                            border: solid 1.5px $bg-gray;
-
+                            border: 1.5px solid $bg-gray;
+                            object-fit: cover;
+                            display: block;
                         }
+
 
                         .home_topicos_card_body {
                             display: flex;
