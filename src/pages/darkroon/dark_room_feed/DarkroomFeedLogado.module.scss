@@ -4,10 +4,12 @@
     padding: 36px;
     display: flex;
     justify-content: center;
+    background-color: $bg-dark-primary;
+    width: 100%;
 
     .area_darkroon_feed {
         width: 100%;
-        max-width: 1333px;
+        max-width: 1184px;
         display: flex;
         flex-direction: column;
         row-gap: 10px;
