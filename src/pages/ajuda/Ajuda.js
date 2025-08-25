@@ -5,7 +5,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { TfiArrowCircleDown, TfiArrowCircleUp } from "react-icons/tfi";
 const Ajuda = () => {
-    const [openIndex, setOpenIndex] = useState(0);
+    const [openIndex, setOpenIndex] = useState();
 
     const toggleQuestion = (index) => {
         setOpenIndex(openIndex === index ? null : index);

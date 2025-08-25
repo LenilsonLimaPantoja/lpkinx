@@ -47,11 +47,11 @@ const Home = () => {
 
             <InvisivelGanhaForma />
 
-            <div className={styles.section5}>
-                <div className={styles.container}>
+            {/* <div className={styles.section5}> */}
+                {/* <div className={styles.container}> */}
                     <Footer />
-                </div>
-            </div>
+                {/* </div> */}
+            {/* </div> */}
         </>
     );
 };

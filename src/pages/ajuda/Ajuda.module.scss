@@ -3,11 +3,13 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
 
     .faqHeaderArea {
         background-color: #CBFB45;
         display: flex;
         justify-content: center;
+        width: 100%;
 
         .faqHeader {
             padding: 36px 0px 59px 0px;
@@ -15,7 +17,7 @@
             flex-direction: column;
             gap: 38px;
             width: 100%;
-            max-width: 1366px;
+            max-width: 1184px;
 
             .faqHeaderContent {
                 display: flex;
@@ -54,7 +56,8 @@
             padding: 48px 0px 0px 0px;
             gap: 11px;
             width: 100%;
-            max-width: 1366px;
+            max-width: 1184px;
+
 
             .searchCategory {
                 flex-grow: 1;
@@ -137,7 +140,9 @@
             padding: 79px 0px 0px 0px;
             gap: 105px;
             width: 100%;
-            max-width: 1366px;
+            max-width: 1184px;
+
+
             .faqSidebar {
                 min-width: 240px;
 
@@ -168,7 +173,6 @@
                 display: flex;
                 flex-direction: column;
                 gap: 28px;
-
                 .faqTitle {
                     font-family: 'AlteHaasGroteskBold';
                     font-size: 40px;
