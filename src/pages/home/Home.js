@@ -31,11 +31,11 @@ const Home = () => {
                 </div>
             </div>
 
-            {/* <div className={styles.section3}>
+            <div className={styles.section3}>
                 <div className={styles.container}>
                     <CreateAndPromoteSection />
                 </div>
-            </div> */}
+            </div>
 
             <EventsSliderSection />
 

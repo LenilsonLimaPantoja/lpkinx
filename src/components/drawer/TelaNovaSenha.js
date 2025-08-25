@@ -15,8 +15,8 @@ const TelaNovaSenha = ({ setEtapa }) => {
             </div>
             <div className={styles.area_form}>
                 <form>
-                    <Input name='usuario' placeholder='Digite sua Nova Senha' type='text' />
-                    <Input name='usuario' placeholder='Repita sua Senha' type='text' />
+                    <Input name='usuario' placeholder='Digite sua Nova Senha' type='password' />
+                    <Input name='usuario' placeholder='Repita sua Senha' type='password' />
                     <ButtonComponent text="Continuar" onClick={() => setEtapa(6)} type='button' />
                     <ButtonComponent bgColor="transparent" color="#707070" border={true} text="Cancelar" onClick={() => setEtapa(1)} type='button' />
                 </form>
