@@ -17,7 +17,7 @@ const Header = () => {
                 <ul className={styles.header_nav}>
                     <li onClick={() => navigation('/')} className={`${styles.header_navItem} ${location.pathname === '/' ? styles.active : ''}`}>Home</li>
                     <li onClick={() => navigation('/2')} className={`${styles.header_navItem} ${location.pathname === '/2' ? styles.active : ''}`}>Criadores</li>
-                    <li onClick={() => navigation('/3')} className={`${styles.header_navItem} ${location.pathname === '/3' ? styles.active : ''}`}>Darkrooms</li>
+                    <li onClick={() => navigation('/darkroom')} className={`${styles.header_navItem} ${location.pathname === '/3' ? styles.active : ''}`}>Darkrooms</li>
                     <li onClick={() => navigation('/4')} className={`${styles.header_navItem} ${location.pathname === '/4' ? styles.active : ''}`}>Eventos</li>
                     <li
                         onClick={() => navigation('/ajuda')}
