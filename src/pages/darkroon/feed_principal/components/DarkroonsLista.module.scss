@@ -16,8 +16,8 @@
     .container_darkrooms_lista_card {
         background-color: $bg-dark-secondary;
         display: flex;
-        gap: 20px;
-        padding: 20px;
+        gap: 28px;
+        padding: 17px 17px 17px 21px;
         width: 100%;
         height: 167px;
         border-radius: 15px;
@@ -35,6 +35,7 @@
             width: 78px;
             height: 78px;
             border-radius: 50%;
+            object-fit: cover;
         }
 
         .container_darkrooms_lista_card_body {
@@ -45,12 +46,11 @@
 
             .container_darkrooms_lista_card_body_top {
                 span {
-                    font-weight: 700;
+                    font-family: 'AlteHaasGroteskBold';
                     font-size: 100%;
                     line-height: 42px;
                     letter-spacing: 0%;
                     color: $bg-gray-b;
-
                 }
 
                 p {
@@ -150,6 +150,7 @@
                         width: 10px;
                         height: 9px;
                         border-radius: 0px;
+                        object-fit: cover;
                     }
                 }
 
@@ -163,6 +164,11 @@
                     justify-content: center;
                     align-items: center;
                     cursor: pointer;
+                    transition: .5s ease-in-out;
+
+                    &:hover {
+                        opacity: .5;
+                    }
 
                     svg {
                         font-size: 14px;
@@ -179,6 +185,12 @@
                 align-items: center;
                 height: 26px;
                 border-radius: 12.5px;
+                cursor: pointer;
+                transition: .5s ease-in-out;
+
+                &:hover {
+                    opacity: .5;
+                }
 
                 svg {
                     color: $bg-gray;
