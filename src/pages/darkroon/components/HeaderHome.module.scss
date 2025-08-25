@@ -2,17 +2,18 @@
 
 .container_header_home {
     background-color: $bg-green;
-    padding: 36px;
+    padding: 38px;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 
     .header_home_area {
         display: flex;
         flex-direction: column;
-        row-gap: 30px;
+        row-gap: 20px;
         flex-grow: 1;
-        max-width: 1333px;
+        max-width: 1184px;
 
         .container_header_home_texto {
             padding-left: 47px;
@@ -33,7 +34,7 @@
 
 
                     strong {
-                        font-family: $font-bold;
+                        font-family: 'AlteHaasGroteskBold';
                     }
                 }
 

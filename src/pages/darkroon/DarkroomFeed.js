@@ -18,10 +18,10 @@ const DarkroomFeed = () => {
     return (
         <>
             {loading && <LoadingSpin />}
-            <div className={styles.container_home}>
+            {/* <div className={styles.container_home}> */}
                 <HeaderHome icone={true} titulo="Darkrooms de " tituloBold="São Paulo - SP" paragrafo="Um ambiente exclusivo para quem deseja trocar experiências, compartilhar interesses e explorar novas possibilidades com discrição." />
                 <Darkroons />
-            </div>
+            {/* </div> */}
         </>
     )
 }
