@@ -1,0 +1,44 @@
+.area_1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 34px;
+    padding-bottom: 43px;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+
+    .area_form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 318px;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        row-gap: 40px;
+
+        svg {
+            font-size: 70px;
+        }
+
+        span {
+            font-size: 24px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+            font-family: 'AlteHaasGroteskBold';
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+        }
+    }
+}

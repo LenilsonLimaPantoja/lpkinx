@@ -14,14 +14,14 @@ const Home = () => {
     const [verOcultarPlanos, setVerOcultarPlanos] = useState(false);
     return (
         <>
-            <div className={styles.sectionDark}>
-                <div className={styles.containerWithPadding}>
+            <div className={styles.section1}>
+                <div className={styles.container}>
                     <Header />
                     <WelcomeSection />
                 </div>
             </div>
 
-            <div className={styles.sectionDarker}>
+            <div className={styles.section2}>
                 <div className={styles.container}>
                     {verOcultarPlanos ? (
                         <PremiumSectionPlanos setVerOcultarPlanos={setVerOcultarPlanos} />
@@ -31,15 +31,15 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className={styles.sectionDark}>
+            {/* <div className={styles.section3}>
                 <div className={styles.container}>
                     <CreateAndPromoteSection />
                 </div>
-            </div>
+            </div> */}
 
             <EventsSliderSection />
 
-            <div className={styles.sectionDarkWithHorizontalPadding}>
+            <div className={styles.section4}>
                 <div className={styles.container}>
                     <DarkroomCommunitySection />
                 </div>
@@ -47,7 +47,7 @@ const Home = () => {
 
             <InvisivelGanhaForma />
 
-            <div className={styles.sectionDark}>
+            <div className={styles.section5}>
                 <div className={styles.container}>
                     <Footer />
                 </div>

@@ -36,7 +36,7 @@ const TelaLogin = ({ setEtapa }) => {
                     <form>
                         <Input name='usuario' placeholder='Usuário, CPF, CNPJ ou E-mail' type='text' />
                         <Input name='senha' placeholder='Senha' type='password' />
-                        <ButtonComponent text="Continuar" onClick={() => alert("Clicado")} type='submit' />
+                        <ButtonComponent text="Continuar" onClick={() => alert("Login clicado")} type='button' />
                     </form>
                 </div>
             </div>

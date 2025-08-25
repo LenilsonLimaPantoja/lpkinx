@@ -8,6 +8,7 @@
     border-radius: 15px;
     height: 70px;
     width: 100%;
+    max-width: 1184px;
 
     .header_logo {
         width: 77px;
@@ -91,9 +92,9 @@
         }
 
         .header_actions {
+            gap: 20px;
 
-            .header_btnRegister,
-            .header_btnLogin {
+            .header_btnRegister {
                 display: none;
             }
 

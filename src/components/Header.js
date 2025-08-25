@@ -1,6 +1,6 @@
 import styles from './Header.module.scss';
 import logo_green from '../arquivos/logo_green.png';
-import { CgMenuRight } from "react-icons/cg";
+import { RiMenuLine } from "react-icons/ri";
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import DrawerFormulario from './drawer/DrawerFormulario';
@@ -29,7 +29,7 @@ const Header = () => {
                     <button className={styles.header_btnRegister}>Registre-se Agora!</button>
                     <button className={styles.header_btnLogin} onClick={() => setOpenCloseMenu(true)}>Entrar</button>
                     <button className={styles.header_btnMenu}>
-                        <CgMenuRight />
+                        <RiMenuLine />
                     </button>
                 </div>
             </div>

@@ -10,12 +10,14 @@ $color-accent: #CBFB45;
     align-items: center;
     gap: 118px;
     width: 100%;
+    max-width: 1184px;
     transform: translateY(50%);
     overflow: hidden;
     animation-name: expandContainer;
     animation-duration: .5s;
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    // background-color: red;
 
     .togglePremiumInfo {
         font-size: 37px;
@@ -75,6 +77,7 @@ $color-accent: #CBFB45;
 
     @media (max-width: 1000px) {
         gap: 80px;
+
         .premiumContent {
             flex-direction: column;
             text-align: center;

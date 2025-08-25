@@ -5,16 +5,17 @@ import { IoIosCloseCircleOutline } from 'react-icons/io';
 import { useState } from 'react';
 import TelaLogin from './TelaLogin';
 // import TelaLogin from './TelaLogin';
-// import TelaEncontrarConta from './TelaEncontrarConta';
-// import TelaEscolherContato from './TelaEscolherContato';
-// import TelaCodigo from './TelaCodigo';
-// import TelaNovaSenha from './TelaNovaSenha';
-// import TelaSucesso from './TelaSucesso';
+import TelaEncontrarConta from './TelaEncontrarConta';
+import TelaEscolherContato from './TelaEscolherContato';
+import TelaCodigo from './TelaCodigo';
+import TelaNovaSenha from './TelaNovaSenha';
+import TelaSucesso from './TelaSucesso';
 
 const DrawerFormulario = ({ isOpenClose, setIsOpenClose }) => {
     const [etapa, setEtapa] = useState(1);
     const toggleDrawer = () => {
         setIsOpenClose((prevState) => !prevState);
+        setEtapa(1);
     }
 
     return (
@@ -35,11 +36,11 @@ const DrawerFormulario = ({ isOpenClose, setIsOpenClose }) => {
                             </button>
                         </div>
                         {etapa === 1 && <TelaLogin toggleDrawer={toggleDrawer} setEtapa={setEtapa} />}
-                        {/* {etapa === 2 && <TelaEncontrarConta toggleDrawer={toggleDrawer} setEtapa={setEtapa} />} */}
-                        {/* {etapa === 3 && <TelaEscolherContato toggleDrawer={toggleDrawer} setEtapa={setEtapa} />} */}
-                        {/* {etapa === 4 && <TelaCodigo toggleDrawer={toggleDrawer} setEtapa={setEtapa} />} */}
-                        {/* {etapa === 5 && <TelaNovaSenha toggleDrawer={toggleDrawer} setEtapa={setEtapa} />} */}
-                        {/* {etapa === 6 && <TelaSucesso toggleDrawer={toggleDrawer} setEtapa={setEtapa} />} */}
+                        {etapa === 2 && <TelaEncontrarConta toggleDrawer={toggleDrawer} setEtapa={setEtapa} />}
+                        {etapa === 3 && <TelaEscolherContato toggleDrawer={toggleDrawer} setEtapa={setEtapa} />}
+                        {etapa === 4 && <TelaCodigo toggleDrawer={toggleDrawer} setEtapa={setEtapa} />}
+                        {etapa === 5 && <TelaNovaSenha toggleDrawer={toggleDrawer} setEtapa={setEtapa} />}
+                        {etapa === 6 && <TelaSucesso toggleDrawer={toggleDrawer} setEtapa={setEtapa} />}
                     </div>
                 </div>
             </Drawer >

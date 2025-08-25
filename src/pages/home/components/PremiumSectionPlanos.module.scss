@@ -1,6 +1,8 @@
 .premiumContainer {
     width: 100%;
     // padding: 45px 95px 334px 95px;
+    max-width: 1184px;
+    // background-color: red;
     overflow: hidden;
     transform: translateY(-50%);
     animation-name: expandContainer;

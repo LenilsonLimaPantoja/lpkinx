@@ -1,16 +1,19 @@
 .container_login {
-    background-color: red;
-
     .area_drawer {
         height: 100vh;
+        overflow: hidden;
         padding: 5px 0px;
 
         .area_login {
             background: linear-gradient(314deg, rgba(35, 35, 37, 1) 61%, rgba(50, 61, 15, 1) 82%, rgba(35, 35, 37, 1) 95%);
-            width: 100%;
+            // width: 100%;
             height: 100%;
             border-top-left-radius: 20px;
             border-bottom-left-radius: 20px;
+            overflow: auto;
+            padding-bottom: 71px;
+            display: flex;
+            flex-direction: column;
 
             .area_close {
                 display: flex;
@@ -37,6 +40,14 @@
                         color: #707070;
                     }
                 }
+            }
+        }
+
+        @media (max-width: 600px) {
+            padding: 0px;
+
+            .area_login {
+                border-radius: 0px;
             }
         }
     }

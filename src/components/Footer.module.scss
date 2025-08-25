@@ -1,14 +1,11 @@
 /* Container principal do footer */
 .footerContainer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
     gap: 128px;
-    // padding: 179px 201px 116px 201px;
-    padding-top: 179px;
-    padding-bottom: 116px;
     width: 100%;
-    max-width: 1366px;
+    max-width: 1184px;
 
     .footerLeft {
         display: flex;
@@ -47,7 +44,6 @@
     }
 
     .footerRight {
-        flex-grow: 1;
         display: flex;
         flex-direction: column;
         gap: 72px;
@@ -59,7 +55,6 @@
             .footerLinksSection {
                 display: flex;
                 flex-direction: column;
-                // flex-grow: 1;
                 gap: 37px;
 
                 .footerSectionTitle {

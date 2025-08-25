@@ -83,7 +83,7 @@ const EventsSliderSection = () => {
                                 <div className={styles.eventInfoOverlay}>
                                     <span>26 Set 25</span>
                                     <span>90's Party America</span>
-                                    <p>Festa prive só para casais jovens e selecionados...</p>
+                                    <p>Festa prive só para casais jovens e selecionados</p>
                                 </div>
                             </div>
                         ))}
